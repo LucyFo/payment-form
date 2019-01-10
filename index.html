@@ -1,44 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>payment-form</title>
-    <link rel="stylesheet" href="main.css">
+  <meta charset="UTF-8">
+  <title>Payment Form</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+  <link href="./main.css" rel="stylesheet" type="text/css">
 </head>
-
 <body>
-
-    <label for="credit-card-number">Credit card number</label>
-    <input type="number" name="credit card number" id="credit-card-number">
-
-
-    <select name="month">
-        <option value="month">Month</option>
-        <option value="january">January</option>
-        <option value="febuary">February</option>
-        <option value="march">March</option>
-        <option value="april">April</option>
-        <option value="may">May</option>
-        <option value="june">June</option>
-        <option value="july">July</option>
-        <option value="august">August</option>
-        <option value="september">September</option>
-        <option value="october">October</option>
-        <option value="november">November</option>
-        <option value="december">December</option>
-    </select>
-
-    <select name="year">
-        <option value="year">Year</option>
-        <option value="2019">2019</option>
-        <option value="2020">2020</option>
-        <option value="2021">2021</option>
-        <option value="2022">2022</option>
-        <option value="2023">2023</option>
-    </select>
+<div class="wrapper">
+  <div class="form-container">
+    <header>
+      <div class="user-name">
+        <h1>Harold Finch</h1>
+        <div>Your total</div>
+      </div>
+      <div class="user-price">$88</div>
+    </header>
+    <form action="#" method="get" novalidate>
+      <div class="form-row">
+        <label for="cardNumber">
+          Credit card number
+        </label>
+        <input type="text" name="cardNumber" id="cardNumber">
+      </div>
+      <div class="form-row">
+        <label for="month">
+          Expiration date
+        </label>
+        <div>
+          <select name="month" id="month">
+            <option disabled selected>Month</option>
+            <option>January</option>
+            <option>February</option>
+            <option>March</option>
+            <option>April</option>
+            <option>May</option>
+            <option>June</option>
+            <option>July</option>
+            <option>August</option>
+            <option>September</option>
+            <option>October</option>
+            <option>November</option>
+            <option>December</option>
+          </select>
+          <label>
+            <select name="year">
+              <option disabled selected>Year</option>
+              <option>2019</option>
+              <option>2020</option>
+              <option>2021</option>
+              <option>2023</option>
+              <option>2024</option>
+              <option>2025</option>
+            </select>
+          </label>
+        </div>
+      </div>
+      <div class="form-row">
+        <label for="cvv">
+          CVV
+        </label>
+        <div class="cvv-holder">
+          <input type="password" name="cvv" id="cvv">
+          <span>3 or 4 digits - <a href="#">view example</a></span>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
 </body>
-
 </html>
